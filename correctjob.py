@@ -188,16 +188,14 @@ class CorrectJob(object):
 
         if len(student_answer) > 30 or len(image_array) > 4:
             return 90
-        if len(student_answer) > 15 or len(image_array) > 0:
+        if len(student_answer) > 15 or len(image_array) > 2:
             return 80
-        return 60
-        # if len(student_answer) > 10 or len(image_array) > 0:
-        #     return 70
-        #
-        # if len(student_answer) > 3 or len(image_array) > 0:
-        #     return 60
+        if len(student_answer) > 10 or len(image_array) > 1:
+            return 70
+        if len(student_answer) > 3 or len(image_array) > 0:
+            return 60
 
-        # return random.choice([20, 30, 40, 50])
+        return random.choice([20, 30, 40, 50])
 
     # 批改单人单项作业。
     def send_score(self, answer_id, score, assign_id):
