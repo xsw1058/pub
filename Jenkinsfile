@@ -1,8 +1,8 @@
-pipeline{
+pipeline {
     agent any
     stages {
-        stage('build'){
-            setps {
+        stage('Build') {
+            steps {
                 sh 'echo "hello world"'
                 sh '''
                     echo "m shell steps works too"
